@@ -57,7 +57,11 @@ for i in range(365):
     iron_energy = (appliance_power["Iron"] * iron_hours) / 1000
 
     total_energy = ( fan_energy + light_energy + laptop_energy + charger_energy + cooler_energy + iron_energy)
+    noise = random.uniform(-0.2, 0.2)
+    total_energy += noise
 
+    if total_energy < 0:
+        total_energy = 0
     data.append([
         current_date.date(),
         temperature,
