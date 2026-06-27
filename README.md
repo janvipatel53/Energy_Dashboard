@@ -1,18 +1,29 @@
 # Smart Hostel Energy Optimization Dashboard
 
-This project predicts the daily energy consumption of a hostel room based on appliance usage and environmental conditions. It also provides suggestions to help reduce unnecessary electricity usage.
+This project predicts the daily energy consumption of a hostel room based on appliance usage and room conditions. It also provides recommendations to help reduce unnecessary electricity usage.
 
-The dashboard takes inputs such as temperature, occupancy, and usage hours of appliances like fans, lights, laptops, chargers, coolers, and iron. Using these inputs, the system estimates daily energy consumption in kWh and calculates approximate electricity cost.
+The dashboard takes inputs such as temperature, occupancy, and usage hours of appliances like fans, lights, laptops, chargers, coolers, and iron. Based on these inputs, the system predicts energy consumption in kWh and estimates electricity cost.
 
-Along with prediction, the system also provides optimization recommendations such as reducing cooler usage or improving ventilation to improve energy efficiency.
+It also suggests simple optimization steps such as reducing cooler usage or improving ventilation to improve energy efficiency.
+
+## Live Demo
+
+Add your deployed app link here.
+
+Example:
+https://your-streamlit-link.streamlit.app
+
+---
 
 ## Features
 
 * Predicts daily energy consumption using machine learning
 * Estimates daily and monthly electricity cost
 * Provides energy-saving recommendations
-* Visualizes historical energy usage through graphs
+* Displays historical energy usage trends
 * Interactive dashboard built using Streamlit
+
+---
 
 ## Tech Stack
 
@@ -20,61 +31,87 @@ Along with prediction, the system also provides optimization recommendations suc
 * Pandas
 * NumPy
 * Scikit-learn
-* Matplotlib / Seaborn
+* Matplotlib
+* Seaborn
 * Streamlit
+
+---
 
 ## Machine Learning Model
 
-Linear Regression is used to predict energy consumption.
+Linear Regression is used for predicting energy consumption.
 
-Model Performance:
+### Model Performance
 
 * R² Score: 0.988
 * MAE: 0.099
 * RMSE: 0.113
 
-## Workflow
+---
 
-1. Generate synthetic energy consumption dataset
-2. Perform exploratory data analysis
-3. Train machine learning model
-4. Generate optimization recommendations
-5. Display results on interactive dashboard
+## Project Workflow
+
+1. Generated synthetic energy consumption dataset for 365 days
+2. Performed exploratory data analysis
+3. Trained machine learning model
+4. Built rule-based recommendation system
+5. Developed and deployed interactive dashboard
+
+---
 
 ## Project Structure
 
-```bash id="1"
+```bash
 energy-dashboard/
 │
 ├── dataset/
 │   └── energy_data.csv
 ├── app.py
-├── model.py
-├── utils.py
 ├── generate_data.py
 ├── eda.py
 ├── train_model.py
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
+
+---
 
 ## Installation
 
+Clone repository:
+
+```bash
+git clone <repo-link>
+```
+
 Install dependencies:
 
-```bash id="2"
+```bash
 pip install -r requirements.txt
 ```
 
-Run the dashboard:
+Run application:
 
-```bash id="3"
+```bash
 streamlit run app.py
 ```
+https://smart-hostel-energy.streamlit.app/
+
+---
+
+## Screenshots
+
+### Dashboard Home
+![Dashboard](screenshots/dashboard.png)
+
+### Prediction Result
+![Prediction](screenshots/predictedresult1.png)
+![Prediction](screenshots/predictedresult2.png)
+
+---
 
 ## Future Improvements
 
-* Train on real-world energy data
-* Use advanced machine learning models
-* Deploy dashboard online
-* Improve UI and analytics
-
+* Train model on real-world smart meter data
+* Improve recommendation system using advanced ML
+* Add more detailed analytics and visualizations
