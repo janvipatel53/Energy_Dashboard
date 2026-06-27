@@ -47,3 +47,48 @@ for i in range(365):
         cooler_hours = random.randint(5, 10)
 
     iron_hours = random.choice([0, 0, 0, 1])
+    
+    #power in kWh
+    fan_energy = (appliance_power["Fan"] * fan_hours) / 1000
+    light_energy = (appliance_power["Light"] * light_hours) / 1000
+    laptop_energy = (appliance_power["Laptop"] * laptop_hours) / 1000
+    charger_energy = (appliance_power["Charger"] * charger_hours) / 1000
+    cooler_energy = (appliance_power["Cooler"] * cooler_hours) / 1000
+    iron_energy = (appliance_power["Iron"] * iron_hours) / 1000
+
+    total_energy = ( fan_energy + light_energy + laptop_energy + charger_energy + cooler_energy + iron_energy)
+
+    data.append([
+        current_date.date(),
+        temperature,
+        occupancy,
+        fan_hours,
+        light_hours,
+        laptop_hours,
+        charger_hours,
+        cooler_hours,
+        iron_hours,
+        total_energy
+    ])
+#dataframe
+df = pd.DataFrame(
+    data,
+    columns=[
+        "Date",
+        "Temperature_C",
+        "Occupancy",
+        "Fan_Hours",
+        "Light_Hours",
+        "Laptop_Hours",
+        "Charger_Hours",
+        "Cooler_Hours",
+        "Iron_Hours",
+        "Energy_kWh"
+    ]
+)
+
+print(df.head())
+
+df.to_csv("dataset/energy_data.csv", index=False)
+
+print("Dataset saved successfully!")
