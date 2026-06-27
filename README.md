@@ -98,16 +98,16 @@ streamlit run app.py
 https://smart-hostel-energy.streamlit.app/
 
 ---
-
 ## Screenshots
 
 ### Dashboard Home
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](Screenshots/dashboard.png)
 
-### Prediction Result
-![Prediction](Screenshots/predictedresult1.png)
-![Prediction](Screenshots/predictedresult2.png)
+### Prediction Result — Energy Prediction
+![Prediction 1](Screenshots/predictedresult1.png)
 
+### Prediction Result — Graph
+![Prediction 2](Screenshots/predictedresult2.png)
 ---
 
 ## Future Improvements
