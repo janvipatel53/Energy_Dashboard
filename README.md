@@ -105,8 +105,8 @@ https://smart-hostel-energy.streamlit.app/
 ![Dashboard](screenshots/dashboard.png)
 
 ### Prediction Result
-![Prediction](screenshots/predictedresult1.png)
-![Prediction](screenshots/predictedresult2.png)
+![Prediction](Screenshots/predictedresult1.png)
+![Prediction](Screenshots/predictedresult2.png)
 
 ---
 
